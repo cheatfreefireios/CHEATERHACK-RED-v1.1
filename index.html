@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080000">
+  <title>HACKER RED MENU</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="snowCanvas" aria-hidden="true"></canvas>
+  <main class="shell">
+    <header class="header">
+      <div class="eyebrow">SECURE ACCESS // ONLINE</div>
+      <h1>HACKER <span>RED</span></h1>
+      <p>ADVANCED CONTROL PANEL</p>
+    </header>
+
+    <section id="authView" class="panel">
+      <div class="panel-title">[ KEY AUTHENTICATION ]</div>
+      <label for="keyInput">ACCESS KEY</label>
+      <input id="keyInput" type="text" placeholder="Nhập key của bạn" autocomplete="off" spellcheck="false">
+      <button id="loginBtn" class="btn primary">ĐĂNG NHẬP</button>
+      <button id="getKeyBtn" class="btn secondary">GET KEY MỚI</button>
+      <p id="authStatus" class="status" role="status">[ VUI LÒNG NHẬP KEY ]</p>
+      <p class="hint">Key có hiệu lực 12 giờ và được liên kết với trình duyệt đã tạo key.</p>
+    </section>
+
+    <section id="getKeyView" class="panel hidden">
+      <div class="panel-title">[ GETKEY CENTER ]</div>
+      <p class="hint">Mỗi thiết bị/trình duyệt được cấp tối đa 4 key mỗi ngày.</p>
+      <button id="createKeyBtn" class="btn primary">TẠO KEY NGẪU NHIÊN</button>
+      <div id="newKeyBox" class="key-box hidden">
+        <small>YOUR NEW ACCESS KEY</small>
+        <strong id="newKeyText"></strong>
+        <button id="copyKeyBtn" class="btn secondary">SAO CHÉP KEY</button>
+        <p id="keyExpiry" class="hint"></p>
+      </div>
+      <p id="getKeyStatus" class="status" role="status"></p>
+      <button id="backBtn" class="btn ghost">QUAY LẠI</button>
+    </section>
+
+    <section id="menuView" class="panel hidden">
+      <div class="panel-title">[ CONTROL PANEL ]</div>
+      <div class="grid">
+        <label class="toggle-row"><span>AIM ASSIST <small>DEMO</small></span><input type="checkbox"></label>
+        <label class="toggle-row"><span>ESP DISPLAY <small>DEMO</small></span><input type="checkbox"></label>
+        <label class="toggle-row"><span>SMOOTH MODE <small>DEMO</small></span><input type="checkbox"></label>
+        <label class="toggle-row"><span>HEAD PRIORITY <small>DEMO</small></span><input type="checkbox"></label>
+      </div>
+      <label for="fov">FOV <output id="fovValue">90</output></label>
+      <input id="fov" class="range" type="range" min="10" max="180" value="90">
+      <label for="smooth">SMOOTHNESS <output id="smoothValue">50</output></label>
+      <input id="smooth" class="range" type="range" min="1" max="100" value="50">
+      <p class="hint">Đây là giao diện mô phỏng. Các công tắc không can thiệp vào trò chơi.</p>
+      <button id="logoutBtn" class="btn ghost">ĐĂNG XUẤT</button>
+    </section>
+    <footer>HACKER RED // WEB EDITION</footer>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
