@@ -1,0 +1,7 @@
+name = "hacker-red-getkey"
+main = "worker.js"
+compatibility_date = "2026-11-08"
+
+[[kv_namespaces]]
+binding = "KEYS"
+id = "THAY_BANG_KV_NAMESPACE_ID"
